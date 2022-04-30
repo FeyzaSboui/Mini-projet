@@ -1,0 +1,94 @@
+body
+{
+    margin: 0;/*marge externe*/
+    padding:0;/*marge interne*/
+    box-sizing: border-box;/*ajouter les marges interne et bordures dans le calcul de lahauteur et de la largeur du body*/
+    background:#EEEFF1;;/*background colour*/
+
+}
+.container
+{
+    position: absolute;/*positionner le loader en absolute*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*mettre le loader au centre*/
+    
+}
+/*chaque barre de l'animation*/
+.bar 
+{
+    width: 10px;
+    height: 70px;
+    background: #fff;
+    display:inline-block;/*les afficher les unes après les autres*/
+    transform-origin:center bottom;
+    border-top-right-radius:20px;
+    border-top-left-radius:20px;
+    box-shadow: 10px 10px 10px inset #544a7a (255,23,25.2);/*animation sur deux secondes , et qui se n'arrete pas*/
+    animation: loader 1s linear infinite;
+
+}
+.bar1
+{
+    animation-delay: 0.1s;/*commence après 0.1s*/
+}
+.bar2
+{
+    animation-delay: 0.2s;
+}
+.bar3
+{
+    animation-delay: 0.3s;
+}
+.bar4
+{
+    animation-delay: 0.4s;
+}
+.bar5
+{
+    animation-delay: 0.5s;
+}
+.bar6
+{
+    animation-delay: 0.6s;
+}
+.bar7
+{
+    animation-delay: 0.7s;
+}
+.bar8
+{
+    animation-delay: 0.8s;
+}
+.bar9
+{
+    animation-delay: 0.9s;
+}
+.bar10
+{
+    animation-delay: 1s;
+}
+/*Le texte de chargement*/
+.Loading_text
+{
+    color:#4d84e2 (255,23,25.2);
+    font-weight:bold;
+    font-family:cursive;
+    color:#4d84e2 ;
+}
+/*l'animation elle meme*/
+@keyframes loader{
+    0%{
+        transform:scaleY(1);/*Modifier la taile de chaque barre*/
+        background: #f4cfdf;
+    }
+    50%{
+        transform:scaleY(1);/*Modifier la taile de chaque barre*/
+        background: #f4cfdf;
+    }
+    100%{
+        transform: scaleY(0.1);/*Modifer la taille de chaque barre*/
+        background:transparent;
+    }
+
+}
